@@ -51,7 +51,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-    'name' => 'Right sidebar (posts)',
+    'name' => 'Posts',
     'id' => 'right_sidebar_posts',
     'before_widget' => '<section>',
     'after_widget' => '</div></section>',
@@ -60,7 +60,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-    'name' => 'Right sidebar (pages)',
+    'name' => 'Pages',
     'id' => 'right_sidebar_pages',
     'before_widget' => '<section>',
     'after_widget' => '</div></section>',
@@ -69,7 +69,7 @@ register_sidebar(array(
 ));
 
 register_sidebar(array(
-    'name' => 'Right sidebar (archives and search)',
+    'name' => 'Archives and Search',
     'id' => 'right_sidebar_archives',
     'before_widget' => '<section>',
     'after_widget' => '</div></section>',
@@ -190,3 +190,6 @@ add_action( 'admin_init', 'mox_editor_style' );
 function mox_editor_style() {
     add_editor_style();
 }
+
+$role = get_role('editor');
+$role->add_cap('edit_theme_options');

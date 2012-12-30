@@ -1,18 +1,5 @@
 <aside class="sidebar clearfix">
 
-    <?php
-    if ( $keys = get_post_custom_keys() ) {
-        foreach ( (array) $keys as $key ) {
-            $keyt = trim($key);
-            if ( '_' == $keyt{0})
-                continue;
-            $values = array_map('trim', get_post_custom_values($key));
-            $value = implode($values,', ');
-
-            echo '<section><div class="headline">'.$key.'</div><div class="content">'.$value.'</div></section>';
-        }
-    }
-    ?>
     <?php display_related_posts_via_taxonomies() ?>
     <?php if(is_single()  && has_tag()) : ?>
     <section>

@@ -169,7 +169,7 @@ h1 {
 h2 {
     color: #000;
     font-size: 26px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     letter-spacing: 1px;
 }
 
@@ -841,6 +841,10 @@ input[type="submit"]:hover {
 .post-list p {
     margin-bottom: 5px;
     font-size: 12px;
+}
+
+.post-list a.button{
+    font-weight: normal;
 }
 
 .archive .post-list article{
